@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Pan/Downloads/weather-forecast/weather-forecast/app/api/weather/route.jsx"],"sourcesContent":["export async function GET() {\r\n  try {\r\n    const res = await fetch(\r\n      \"https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en\",\r\n      { cache: \"no-store\" } // 確保唔用緩存，搵最新數據\r\n    );\r\n    if (!res.ok) {\r\n      throw new Error(\"搵數據失敗\");\r\n    }\r\n    const data = await res.json();\r\n    return Response.json(data.weatherForecast);\r\n  } catch (error) {\r\n    return Response.json({ error: error.message }, { status: 500 });\r\n  }\r\n}\r\n"],"names":[],"mappings":";;;AAAO,eAAe;IACpB,IAAI;QACF,MAAM,MAAM,MAAM,MAChB,oFACA;YAAE,OAAO;QAAW,EAAE,eAAe;;QAEvC,IAAI,CAAC,IAAI,EAAE,EAAE;YACX,MAAM,IAAI,MAAM;QAClB;QACA,MAAM,OAAO,MAAM,IAAI,IAAI;QAC3B,OAAO,SAAS,IAAI,CAAC,KAAK,eAAe;IAC3C,EAAE,OAAO,OAAO;QACd,OAAO,SAAS,IAAI,CAAC;YAAE,OAAO,MAAM,OAAO;QAAC,GAAG;YAAE,QAAQ;QAAI;IAC/D;AACF","debugId":null}}]
+}

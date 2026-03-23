@@ -10,15 +10,89 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 ;
-function WeatherButton({ forecast, onClick }) {
-    const { forecastDate, forecastMaxtemp, forecastMintemp, ForecastIcon } = forecast;
+function WeatherButton({ forecast, onClick, active }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-        onClick: ()=>onClick(forecastMaxtemp.value, forecastMintemp.value, ForecastIcon),
-        className: "w-full p-4 mb-2 text-left bg-gray-100 rounded-lg hover:bg-gray-200 transition",
-        children: forecastDate
-    }, void 0, false, {
+        onClick: onClick,
+        className: `w-full p-5 text-left rounded-2xl transition-all duration-300 border mb-2 flex items-center justify-between group ${active ? "bg-white shadow-[0_10px_30px_rgba(59,130,246,0.15)] border-blue-500 ring-2 ring-blue-500/10 scale-[1.02]" : "bg-white/50 border-transparent hover:border-slate-300 hover:bg-white"}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center gap-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: `https://www.hko.gov.hk/images/wxicon/pic${forecast.ForecastIcon}.png`,
+                        alt: "icon",
+                        className: "w-10 h-10 object-contain"
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/WeatherButton.jsx",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-[10px] font-bold text-slate-400",
+                                children: forecast.forecastDate
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/WeatherButton.jsx",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: `text-lg font-black ${active ? "text-blue-600" : "text-slate-700"}`,
+                                children: forecast.week
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/WeatherButton.jsx",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/WeatherButton.jsx",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/WeatherButton.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-right",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "text-lg font-black text-slate-800",
+                        children: [
+                            forecast.forecastMaxtemp.value,
+                            "°"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/WeatherButton.jsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "text-sm text-slate-400 ml-1",
+                        children: [
+                            "/ ",
+                            forecast.forecastMintemp.value,
+                            "°"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/WeatherButton.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/WeatherButton.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/app/components/WeatherButton.jsx",
-        lineNumber: 6,
+        lineNumber: 3,
         columnNumber: 5
     }, this);
 }
